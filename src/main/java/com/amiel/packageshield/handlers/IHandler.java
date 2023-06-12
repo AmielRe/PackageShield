@@ -5,6 +5,6 @@ import com.amiel.packageshield.payload.response.IResponse;
 import jakarta.validation.Valid;
 import org.springframework.http.ResponseEntity;
 
-public interface Handler {
+public interface IHandler {
     ResponseEntity<IResponse> handle(@Valid final ScanRequest scanRequest);
 }
