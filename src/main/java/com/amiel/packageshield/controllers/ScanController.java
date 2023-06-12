@@ -53,7 +53,7 @@ public class ScanController implements ApplicationContextAware {
         } catch(Exception ex) {
             String errMsg = String.format("Error occurred while trying to process scan request for %s ecosystem", scanRequest.getEcosystem());
             logger.error(errMsg, ex);
-            return ResponseEntity.badRequest().body(new MessageResponse(errMsg));
+            return ResponseEntity.internalServerError().body(new MessageResponse(errMsg));
         }
     }
 }
