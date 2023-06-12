@@ -1,0 +1,11 @@
+query($packageName: String!, $ecosystem: SecurityAdvisoryEcosystem!) {
+    securityVulnerabilities(ecosystem: $ecosystem, first: 100, package: $packageName) {
+        nodes {
+            severity
+            vulnerableVersionRange
+            firstPatchedVersion {
+                identifier
+            }
+        }
+    }
+}
